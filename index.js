@@ -58,7 +58,7 @@ myForm.addEventListener('submit', function (event) {
     axios.get(`http://www.omdbapi.com/?apikey=b43843a0&s=${urlEncodedSearchString}`)
         .then((response)=>{
             console.log(response.data.Search)
-            // moviesArray = response.data.Search
+            movieData = response.data.Search
             // console.log(response.data);
             movies.innerHTML = renderMovies(response.data.Search)
         });
